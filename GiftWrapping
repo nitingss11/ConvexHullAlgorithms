@@ -9,8 +9,10 @@ struct Point
 
 int main()
 {  
+    int N;
     cout << "Please enter the no. of points : "<<endl;
     cin>>N;
+    Point *points = new Point[N];
    
    return 0;
 }
