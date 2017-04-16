@@ -9,5 +9,17 @@ struct Point
 
 int main()
 {  
+    
+    int N;
+    cout << "Please enter the no. of points : "<<endl;
+    cin>>N;
+    Point *points = new Point[N];
+    
+    for(int i=0;i<N;i++)
+      cin>>points[i].x>>points[i].y;
+    
+    cout << "The points in the Convex hull are: "<<endl;
+    convexHull(points, N);
+    
  return 0;
  }
