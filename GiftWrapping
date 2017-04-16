@@ -9,6 +9,8 @@ struct Point
 
 int main()
 {  
-    
-    return 0;
+    cout << "Please enter the no. of points : "<<endl;
+    cin>>N;
+   
+   return 0;
 }
