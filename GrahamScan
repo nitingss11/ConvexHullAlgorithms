@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stdlib.h>
+#include <stack>
+
 using namespace std;
 
 struct Point
@@ -6,6 +9,44 @@ struct Point
         int x;
         int y;
 };
+
+void convexHull(Point points[], int n)
+{
+    int ymin = points[0].y;
+    int min = 0;
+   
+    for (int i = 1; i < n; i++)
+     {
+        int y = points[i].y;
+        if ((y < ymin) || (ymin == y && points[i].x < points[min].x))
+          ymin = points[i].y, min = i;
+      }
+ 
+    swap(points[0], points[min]);
+ 
+    p0 = points[0];
+    qsort(&points[1], n - 1, sizeof(Point), compare);
+ 
+    stack<Point> S;
+    S.push(points[0]);
+    S.push(points[1]);
+    S.push(points[2]);
+ 
+    for (int i = 3; i < n; i++)
+    {
+        while (orientation(nextToTop(S), S.top(), points[i]) != 2)
+            S.pop();
+        S.push(points[i]);
+    }
+ 
+    while (!S.empty())
+    {
+        Point p = S.top();
+        cout << "(" << p.x << ", " << p.y << ")" << endl;
+        S.pop();
+    }
+}
+
 
 int main()
 {  
