@@ -12,6 +12,15 @@ struct Point
 
 Point p0;
 
+Point nextToTop(stack<Point> &S)
+{
+    Point p = S.top();
+    S.pop();
+    Point res = S.top();
+    S.push(p);
+    return res;
+}
+
 void swap(Point &p1, Point &p2)
 {
     Point temp = p1;
