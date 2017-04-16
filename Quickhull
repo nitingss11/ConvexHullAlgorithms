@@ -131,9 +131,9 @@ int main()
     findPartialHull(parray, upper, parray[0], parray[N-1]);   
     findPartialHull(parray, lower, parray[N-1], parray[0]);   
     
-    sort(upper.begin(),upper.end(),comp); //sort result; increasing order of x
+    sort(upper.begin(),upper.end(),comp); 
     sort(lower.begin(),lower.end(),comp);
-    float t3 = clock(); //second sort stop; also total time stop
+    float t3 = clock();
     cout << "The convex hull is made up of the following points: " << endl;
  
     for (vector<point*>::iterator it = upper.begin(); it < upper.end(); it++){ 
