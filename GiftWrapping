@@ -9,6 +9,10 @@ struct Point
 
 void convexHull(Point points[], int n)
 {
+     if (n < 3)
+        return;
+        
+     
  }
 
 int main()
