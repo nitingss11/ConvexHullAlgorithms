@@ -1,11 +1,11 @@
 #include<iostream>
 #include<algorithm>
 #include<vector>
-#include<math.h>
-#include <stdlib.h> 
+#include<cmath>
+#include <cstdlib> 
 #include<string>
 #include<fstream>
-#include<time.h>
+#include<ctime>
 
 using namespace std;
 
@@ -32,7 +32,12 @@ class point
             return _y;
          }
  };
- 
+
+bool comp(point *a, point *b){  
+    
+    return (a->getX()<b->getX());
+}
+
 int determinant(point *p1, point *p2, point *p3){  
     
     int d = p1->getX() * p2->getY() + p3->getX() * p1->getY() + p2->getX() * p3->getY();
