@@ -7,12 +7,21 @@ struct Point
         int y;
 };
 
+void convexHull(Point points[], int n)
+{
+ }
+
 int main()
 {  
     int N;
     cout << "Please enter the no. of points : "<<endl;
     cin>>N;
     Point *points = new Point[N];
-   
+    
+    for(int i=0;i<N;i++)
+      cin>>points[i].x>>points[i].y;
+    
+    
+         
    return 0;
 }
