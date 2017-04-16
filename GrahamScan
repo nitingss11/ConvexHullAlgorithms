@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <stack>
+#include<ctime>
 
 using namespace std;
 
@@ -103,7 +104,9 @@ int main()
       cin>>points[i].x>>points[i].y;
     
     cout << "The points in the Convex hull are: "<<endl;
+    float t0 = clock();
     convexHull(points, N);
-    
+    float t1 = clock();
+    cout << "Total time: " << (t1-t0)/CLOCKS_PER_SEC << " seconds" << endl; 
  return 0;
  }
