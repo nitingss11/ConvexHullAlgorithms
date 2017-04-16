@@ -60,7 +60,8 @@ int main()
     for(int i=0;i<N;i++)
       cin>>points[i].x>>points[i].y;
     
-    
+    cout << "The points in the Convex hull are: "<<endl;
+    convexHull(points, N); 
          
    return 0;
 }
