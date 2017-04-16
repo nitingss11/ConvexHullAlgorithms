@@ -97,12 +97,12 @@ int main()
     vector<point*> upper = vector<point*>();    
     vector<point*> lower = vector<point*>();   
     
-	cout << "Please enter the number of points : "<<endl;
+   cout << "Please enter the number of points : "<<endl;
    cin>>N;
    
     int check;
 	 
-    cout<<"Enter\n 1 (to check for random points) \n2 (to enter the points yourself)\n";
+    cout<<"Enter\n 1 (to check for random points) \n 2 (to enter the points yourself)\n";
 	 cin>>check;
 	 
       if(check==1)  {
@@ -116,7 +116,7 @@ int main()
 	    }  
 	  
       if(check==2){
-	      for (int i = 0; i < N; i++){   //read in file
+	      for (int i = 0; i < N; i++){  
         int x, y;
         cin>> x;
         cin>> y;
