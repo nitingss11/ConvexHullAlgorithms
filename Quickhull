@@ -33,7 +33,13 @@ class point
          }
  };
  
- 
+int determinant(point *p1, point *p2, point *p3){  
+    
+    int d = p1->getX() * p2->getY() + p3->getX() * p1->getY() + p2->getX() * p3->getY();
+    d -= (p3->getX() * p2->getY() + p2->getX() * p1->getY() + p1->getX() * p3->getY());
+    return d;
+}
+
 void findPartialHull(vector<point*> &arr, vector<point*> &result, point* p1, point* pn){
   
   vector<point*> s1 = vector<point*>();  
